@@ -1,0 +1,30 @@
+How it was using Diff to compare files?
+- I am using  Windows PC and I used the FC command to compare two files with some small
+differences. It was really enlightening how fast one can be able tto debug a problem
+without spending so much time. It was simple and straight forward. Hopefully willing to
+use this amazing strategy again.
+
+How accessing the entire history make you a more efficient programmer in the long term?
+- Hhaving access to your file history can help you restore your programs to any point
+in time. You ca n try new code and not have to worry about saving a separate copy of the
+old one. You can keep track of the growth off you file and maybe learn from previous 
+attempts and mistakes.
+
+Pros and Cons of manually choosing to create a commit (Git) vs automatically saving (Google
+Docs)
+Pros:
+- You have an option to save a commit code that makes logical sense
+- You can leave a short description of the commit you made to help understand the commit history
+- You have control over the file history, not too much files will be saved
+Cons:
+- You can forget to save a commit.
+- You may take long to have code that makes logical sense.
+- Takes practice to write meaningful descriptions of commits.
+
+Why some version controls (Git) allow saving multiple files in one commit while others like
+Google Docs, treat each file separately?
+- It is very common to have more that one related file in a repository. If one file changes
+then related changes to other files to compensate for that change can be made, hence 
+comparison accross multiple files can be done even under one commit because it will be 
+one feature that would have been added e.g. adding a a form, it will need HTML elements, 
+CSS styles for the layout and coloring and JS for posting the form.
