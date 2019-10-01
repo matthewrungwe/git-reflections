@@ -1,0 +1,26 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+- We initialise a repository by using the command *git init* to turn a directory a repository.
+At the same time, *git init* creates a .git directory. The .git directory stores the meta 
+data about the history of the repository. 
+- .git directory is not made readily available to the user by a simple *ls* command on the 
+repositiry but to use *ls -a*.
+- A repository can be created on an empty directory or a directory that already has files.
+- Just after creating a new repository, if you call *git log* command on that repository it 
+will give you the following message "fatal: your current branch 'master' does not have any 
+commits yet".
+- To check the status of the git repository, use *git status* command.
+
+How is the staging area different from the working directory and the repository? What value do 
+you think it offers?
+
+- The staging area is an intermeidate area that you add file you want to commit.
+- Files that exist in the staging area are added before a commit is made. Ths allows more control
+as you ca n specify which files you want to commit at a given time. After selceting the files,
+add them to the staging area to track before commiting.
+- We use the staging dirctory when we want to make changes to the directory.
+- After you are done making changes, your commit will bundle the files added into one commit and 
+save it to the repository. 
+- *git add fileName* is a command used to save files to the staging area
+- run *git status* to see which files in that repository are added to the staging area to commit.
+
