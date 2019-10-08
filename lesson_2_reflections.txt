@@ -24,3 +24,76 @@ save it to the repository.
 - *git add fileName* is a command used to save files to the staging area
 - run *git status* to see which files in that repository are added to the staging area to commit.
 
+How can you use the staging area to make sure you have one commit per logical change?
+ 
+System: (Working Directory) --> (Staging Area) --> (Repository)
+- before we do anything, the Repository sends a reference copy of the most recent commit to the 
+staging area. 
+- Now we can call *git diff* command, Notice: no arguments after *... diff*. This command will 
+compare the most recent repository with the current state of the files to see whether there 
+were any changes made since the last commit. If there are changes, they will be shown, if not,
+nothing will be returned.
+- the results from *git diff* can help you decide whether the changes are logical or not and also
+if more that one file has changed, you can also compare the logic between them.
+- After deciding on the logical changes, use *git add fileName.ex* to add the file you want to 
+commit and use *git commit* or *git commit -m "MessageExample"* to commit the change.
+- continue using *git status* and *git diff* until all logical changes are commited. 
+
+What are some situations when branches would be helpful in keeping your history organized? How 
+would branches help?
+
+Using branches allows you to:
+- try new features
+- try out different concepts you are not yet sure of
+- adding different versions of languages for your project
+
+this is all done without having to change the original project or idea.
+
+- use *git branch* to print out the current branches you have in your repository. 
+- *git branch branchName* creates a separate branch named branchName on your repository, this branch
+will inherit all the code in the master branch from the time the project was created up until the 
+the new branch was created. After the new branch is created, changes in that branch will be 
+independent of the master branch.
+- use *git checkout branch* to activate or switch to a certain branch. To see which branch is currently active 
+use *git branch* again. The active branch will be preceeded with an asterisk (*) and it will also 
+be highlighted.
+
+How do the diagrams help you visualize the branch structure?
+
+- You can easily see on which commits you atrted new branchs on. 
+- It also becomes easy to see or trace the branch you are currently working on to see which commits 
+are reachable and which commits are not reachable.
+- to see a graph of the branches you currently have, and  the commits made, use the command
+*git log --graph --oneline branchOne branchTwo*
+- having a structural representation of your project means you get to track the progress you
+are making on your project. You can also get to decide when to merge your branches or create
+one ones.  
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way 
+we do?
+
+-After merging two branches, the all become represented by one branch. Using *git merge mainBranch helperBranch*
+will merge helperBranch onto mainBranch. This means that all the commits in helperBranch become commits 
+of the mainBranch and from that point in time the two branches will start being represented by the 
+mainBranch's name.
+- if your mainBranch is the one currentl checked out. You can use *git merge helperBranch* only if you 
+are sure that the current branch you have checked out is the one you need to merge onto. 
+- Use *git branch -d helperBranch* to delete the branch label (name) and not the commits. Deleting the 
+branch will make other commits not available.  
+- *git show commitId* logs out the commit in relatin to the branch that was used to create it instead of 
+giving you an entire commit history. *git show* logs out the current commit Id in relation to the branch
+it is in. *git show commitId* compares the commit to its parent branch.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Pros of automatic merging over manually merging
+- Automatically merging with allows the files to be compared line by line. 
+- The is little chances of you missing a change.
+- You can get to have the change in your repository history for future reference
+- It's fast
+
+Cons
+- Merging can't automatically decide on the logical that need to be kept or thhrown away.
+- Manually editing or decciding is needed where a conflict appears during merging.
+- Use *git status*, *git add fileName*, *git commit* after manually changing the code and saving it.
+After manually solving a conflict, commit it.
+
