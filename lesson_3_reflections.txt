@@ -1,1 +1,7 @@
+When would you want to use a remote repository rather than keeping all your work local?
 
+- Using remote allows you to work on your project locally on your computer or from the GitHub website. Using such a feature allows you to have well up-to-date and same copies of your project locally or on the website.
+- Use *git remote* to see already existing remotes (if any). 
+- Use *git remote add remoteName repositoryURL* to create a new remote.
+- A remote is simply a pointer to a repository, it exists in place of the long URL. Its also called remote because it allows you to control the state of your repository on the website and locally.
+- Use *git push remoteName branchName* to copy over the curent state of branchName (branch) to the website and after excecuting this command, the branch state (commits and files) would have been copied.  
