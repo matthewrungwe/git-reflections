@@ -1,7 +1,38 @@
 When would you want to use a remote repository rather than keeping all your work local?
 
-- Using remote allows you to work on your project locally on your computer or from the GitHub website. Using such a feature allows you to have well up-to-date and same copies of your project locally or on the website.
+- Using remote allows you to work on your project locally on your computer or from the GitHub website. 
+Using such a feature allows you to have well up-to-date and same copies of your project locally or on 
+the website.
 - Use *git remote* to see already existing remotes (if any). 
 - Use *git remote add remoteName repositoryURL* to create a new remote.
-- A remote is simply a pointer to a repository, it exists in place of the long URL. Its also called remote because it allows you to control the state of your repository on the website and locally.
-- Use *git push remoteName branchName* to copy over the curent state of branchName (branch) to the website and after excecuting this command, the branch state (commits and files) would have been copied.  
+- A remote is simply a pointer to a repository, it exists in place of the long URL. Its also called remote 
+because it allows you to control the state of your repository on the website and locally.
+- Use *git push remoteName branchName* to copy over the curent state of branchName (branch) to the website 
+and after excecuting this command, the branch state (commits and files) would have been copied.  
+
+
+Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with 
+your remote repository?
+- Sometimes you want to try out new features on the same branch and only have to make them public when you 
+feel comfortable with the changes. 
+- Doing manual pulling gives you control over when files get to update
+- Use *git pull remoteName branchName* to copy over a state of a branch from the remote repository.
+
+
+Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+- A fork is simply a copy of a repository. This feature only exists on the GitHub website and not on your 
+local computer. You can use *fork* by visiting another repository that does not belong to you, maybe a 
+friends' or someone who wants to share their repository with you, pressing the fork button on that 
+repository will copy the repository to your profile or your repositories ON THE WEBSITE.
+- Cloning can happen both on the website and locally. Mostly done when downloading a repository to a local
+computer or creating the same copy of a repository locally.
+- Branches are part of the repositories. Cloning and forking allows you to copy all the branches that exist 
+in a repository 
+
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+- When you have the last known state stored locally. You will have the chance to use *git fetch remoteName* or 
+*git pull remoteName branchName* to compare changes made on GitHub to those stored locally. *git merge origin/master naster*
+will allow you to merge changes and edit the code you want to keep and make a commit. 
