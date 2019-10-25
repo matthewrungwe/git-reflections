@@ -35,4 +35,8 @@ What is the benefit of having a copy of the last known state of the remote store
 
 - When you have the last known state stored locally. You will have the chance to use *git fetch remoteName* or 
 *git pull remoteName branchName* to compare changes made on GitHub to those stored locally. *git merge origin/master naster*
-will allow you to merge changes and edit the code you want to keep and make a commit. 
+will allow you to merge changes and edit the code you want to keep and make a commit.
+- You will also now push the changes you want to keep to the GitHub repository. 
+
+
+How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
